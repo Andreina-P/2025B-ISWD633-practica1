@@ -15,12 +15,20 @@ docker pull <nombre imagen>:<tag>
 
 Descargar la imagen **hello-world**
 # COMPLETAR
+```
+docker pull hello-world
+```
 
 **¿Qué es nginx**
 # COMPLETAR 
 
+Nginx (pronunciado como "engine-x") es un servidor web de alto rendimiento y un servidor proxy inverso. Es ampliamente utilizado para servir aplicaciones web y manejar tráfico de manera eficiente. Se puede utilizar la misma herramienta que su balanceador de carga, proxy inverso, caché de contenido y servidor web, lo que minimiza la cantidad de herramientas y configuraciones que su organización necesita mantener.
+
 Descargar la imagen  **nginx** en la versión **alpine**
 # COMPLETAR
+```
+docker pull nginx:alpine
+```
 
 ### Listar imágenes
 
@@ -29,6 +37,10 @@ docker images
 ```
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+
+<img width="552" height="88" alt="image" src="https://github.com/user-attachments/assets/226a983b-0c0e-4e94-a591-d23b5a3dd72f" />
+
+
 
 **Identificadores**
 
@@ -45,8 +57,14 @@ docker inspect <nombre imagen>:<tag>
 Inspeccionar la imagen hello-world 
 # COMPLETAR
 
+```
+docker inspect hello-world
+```
+
 **¿Con qué algoritmo se está generando el ID de la imagen**
 # COMPLETAR
+
+El ID de la imagen de Docker se genera utilizando un algoritmo de hash llamado SHA256. Este algoritmo toma los datos de la imagen (su contenido, incluyendo los capas de archivos, configuraciones, etc.) y genera una cadena de caracteres de 64 caracteres en formato hexadecimal.
 
 ### Filtrar imágenes
 
@@ -54,6 +72,13 @@ Inspeccionar la imagen hello-world
 docker images | grep <termino a buscar>
 
 ```
+
+Para Windows:
+```
+docker images | findstr  <termino a buscar>
+
+```
+
 
 ### Para eliminar una imagen
 Eliminar permanentemente la imagen de tu sistema Docker.
@@ -64,6 +89,11 @@ docker rmi <nombre imagen>:<tag>
 
 Eliminar la imagen hello-world 
 # COMPLETAR
+```
+docker rmi hello-world
+```
+<img width="680" height="59" alt="image" src="https://github.com/user-attachments/assets/00711265-a8ba-4dc1-83b7-bbbff45296bf" />
+
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
